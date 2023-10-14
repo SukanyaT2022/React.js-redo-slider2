@@ -1,0 +1,42 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+ }
+ 
+ html, body{
+    overflow-x: hidden;
+ }
+
+.mainBox-TextImage{
+width: 70%;
+height: 500px;
+display: flex;
+border: 2px solid green;
+margin: auto;
+justify-content: space-between;
+}
+.controlImage{
+width: 48%;
+height: 100%;
+}
+.text{
+    width: 48%;
+    height: 100%;
+    background-color: lightgray;
+    padding: 50px;
+}
+.controlBothButton{
+    width: 70%;
+    margin: auto;
+    padding-top: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+.controlBothButton button{
+padding: 20px;
+border: none;
+border-radius: 30px;
+margin: 0px 5px;
+}
