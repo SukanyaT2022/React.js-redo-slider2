@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import './TwoBox.css'
+import { usePrevious } from '@chakra-ui/react';
 
 const data = [
 {
@@ -36,10 +37,10 @@ const data = [
 const TwoBox = () => {
   const [currentIndex, setCurrentIndex]=useState(0)
   const preSlider =()=>{
-
+setCurrentIndex((valPre)=>valPre === 0 ? data.length - 1 : valPre -1)
   }
 const nextSlider =()=>{
-
+setCurrentIndex((valNext)=>valNext===data.length - 1 ? 0 : valNext+1)
 }
 
   return (
@@ -53,10 +54,17 @@ const nextSlider =()=>{
 
       </div>
     </div>
-
+<div className='Main-ControlButtonDot'>
     <div className='controlBothButton'>
     <button onClick={preSlider}>Previous</button>
     <button onClick={nextSlider}>Next</button>
+    </div>
+    <div className='controlAllDot'>
+<p>1</p>
+<p>2</p>
+<p>3</p>
+<p>4</p>
+    </div>
     </div>
     </>
   )
