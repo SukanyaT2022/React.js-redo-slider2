@@ -46,7 +46,7 @@ setCurrentIndex((valNext)=>valNext===data.length - 1 ? 0 : valNext+1)
   return (
     <>
     <div className='mainBox-TextImage'>
-      <img src={data[currentIndex].image} className='controlImage'/>
+      <img src={data[currentIndex].image} className='controlImage' alt={data[currentIndex].name}/>
      {/* <div className='image'>{data[currentIndex].image}</div> */}
      <div className='text'>
  <h2>{data[currentIndex].name}</h2>
@@ -60,10 +60,10 @@ setCurrentIndex((valNext)=>valNext===data.length - 1 ? 0 : valNext+1)
     <button onClick={nextSlider}>Next</button>
     </div>
     <div className='controlAllDot'>
-<p>1</p>
-<p>2</p>
-<p>3</p>
-<p>4</p>
+<p onClick={()=>setCurrentIndex(0)}>1</p>
+<p onClick={()=>setCurrentIndex(1)}>2</p>
+<p onClick={()=>setCurrentIndex(2)}>3</p>
+<p onClick={()=>setCurrentIndex(3)}>4</p>
     </div>
     </div>
     </>

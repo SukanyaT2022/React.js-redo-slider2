@@ -19,6 +19,7 @@ justify-content: space-between;
 .controlImage{
 width: 48%;
 height: 100%;
+object-fit: cover;
 }
 .text{
     width: 48%;
